@@ -20,14 +20,14 @@
         $ext = pathinfo($image, PATHINFO_EXTENSION);
         $rename = unique_id().'.'.$ext;
         $image_size = $_FILES['image']['size'];
-        $img_tmp_name = $_FILES['image']['tmp_name'];
+        $image_tmp_name = $_FILES['image']['tmp_name'];
         $image_folder = '../uploaded_files/' .$rename;
     
         $select_seller = $conn->prepare("SELECT * FROM `seller` WHERE email = ?");
         $select_seller->execute([$email]);
 
         if ($select_seller->rowCount() > 0){
-            $warning_msg[] = 'email already exist!';
+            $warning_msg[] = "email already exist!";
         }else{
             if($pass != $cpass){
                 $warning_msg[] = 'confirm password not matched';

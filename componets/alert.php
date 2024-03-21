@@ -6,9 +6,9 @@
         }
     }
     if (isset($warning_msg)) {
-        foreach ($warning_msg as $warning_msg_msg)
+        foreach ($warning_msg as $warning_msg)
         {
-            echo '<script>swal("'.$warining_msg.'", "", "warning");</script>';
+            echo '<script>swal("'.$warning_msg.'", "", "warning"); </script>';
         }
     }
     if (isset($info_msg)) {
