@@ -11,6 +11,7 @@
         echo "Connection failed: " . $e->getMessage();
     }
 
+    if(!function_exists('unique_id')){
     function unique_id() {
         $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charlength = strlen($chars);
@@ -20,4 +21,5 @@
         }
         return $randomString;
     }
+} 
 ?>

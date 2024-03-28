@@ -1,5 +1,5 @@
 <?php
-    include '../componets/connect.php';
+
 
     if(isset($_COOKIE['seller_id'])){
         $seller_id = $_COOKIE['seller_id'];
@@ -13,10 +13,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Sky Summer - seller registration page</title>
+    <title>Blue Sky Summer - Admin Dashboard page</title>
     <link rel="stylesheet" type="text/css" href="../css/admin_style.css">
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body> 
     <div class="main-container">
