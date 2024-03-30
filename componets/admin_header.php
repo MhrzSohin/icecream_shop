@@ -2,6 +2,7 @@
  <header>
     <div class="logo">
         <img src="../image/logo.png" width="150">
+        
     </div>
     <div class="right">
         <div class="bx bxs-user" id="user-btn"></div>
@@ -40,7 +41,7 @@
             
         ?>
         <div class="profile">
-            <img src="../uploaded_files/<?= $fetch_profile['image']; ?> class= "logo-img" width="100">
+            <img src="../uploaded_files/<?= $fetch_profile['image']; ?> " class= "logo-img" width="100">
             <p><?= $fetch_profile['name']; ?></p>
         </div>
         <?php } ?>

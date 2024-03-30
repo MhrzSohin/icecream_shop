@@ -33,7 +33,7 @@ html{
 .btn{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     text-transform: capitalize;
     color: var(--main-color);
@@ -66,7 +66,7 @@ html{
 .empty{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     text-transform: capitalize;
     color: var(--main-color);
@@ -93,7 +93,7 @@ input[type='submit']:hover{
 .box-container .box{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     margin: 1rem;
 }
@@ -164,7 +164,7 @@ section,
 .form-container form{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     padding: 2rem;
@@ -225,7 +225,7 @@ section,
 .form-container form .box{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     width: 100%;
     border-radius: .5rem;
@@ -250,11 +250,12 @@ header{
     left: 0;
     top: 0;
     right: 0;
-    height: 80px;
+    height: 60px;
     z-index: 151;
     box-shadow: 0px 5px 10px 0px #aaa;
     padding: 0 50px;
-    background-color: #fff;
+    background-color: #F4F8EE;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -268,15 +269,16 @@ header{
     color: var(--pink-color);
     cursor: pointer;
     transition: .6s;
+    
 }
 .toogle-btn{
-    margin-left: .5rem;
+    margin-right: .5rem;
     display: none;
 }
 .profile-detail{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     position: absolute;
     top: 125%;
@@ -315,7 +317,7 @@ header{
 }
 .sidebar{
     background-color: var(--white-alpha-25);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     padding-top: 2rem;
     width: 18vw;
     height: 100vh;
@@ -340,7 +342,7 @@ header{
     justify-content: center;
 }
 .sidebar .profile{
-    margin-top: 2.5rem;
+    margin-top: 3rem;
 }
 .profile .logo-img{
     border-radius: 50%;
@@ -351,18 +353,18 @@ header{
     margin-top: .5rem;
     text-transform: uppercase;
     font-weight: bolder;
-    color: grey;
+    color: #000;
     font-size: 1.3rem;
 }
 .sidebar ul li{
     padding: 1rem;
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     position: relative;
     transition: .5s;
-    margin: .5rem o;
+    margin: .5rem 0;
 }
 .sidebar ul li::before{
     position: absolute;
@@ -389,13 +391,16 @@ header{
     font-size: 12px;
     font-weight: bold;
 }
-.social-links{
-    margin-bottom: 3rem ;
+.sidebar h3{
+    color: var(--main-color)
 }
 .social-links{
+    margin-bottom: 1rem ;
+}
+.social-links i{
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alpha-40);
-    backdrop-filter: var(--blackdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
     box-shadow: var(--box-shadow);
     cursor: pointer;
     margin: .3rem;
@@ -406,6 +411,7 @@ header{
     font-size: 20px;
     transition: .5s;
     border-radius: 50%;
+    color: var(--main-color);
 
 }
 .social-links i:hover{
