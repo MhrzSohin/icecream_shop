@@ -29,7 +29,7 @@
     <!-- sweetalert cdn link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <!-- custom js link -->
-    <script src="../js/script.js"></script>
+    <script src="../js/admin_script.js"></script>
     <?php include '../componets/alert.php'; ?>  
 </body>
 </html>
