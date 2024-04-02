@@ -6,7 +6,7 @@
     </div>
     <div class="right">
         <div class="bx bxs-user" id="user-btn"></div>
-        <div class="toogle-btn"><i class="bx bx-menu"></i></div>
+        <div class="toggle-btn"><i class="bx bx-menu"></i></div>
     </div>
     <div class="profile-detail">
         <?php
@@ -19,7 +19,7 @@
             
         ?>
         <div class="profile">
-            <img src="../uploaded_files/<?= $fetch_profile['image']; ?> class= "logo-img" width="100">
+            <img src="../uploaded_files/<?= $fetch_profile['image']; ?> "class= "logo-img" width="100">
             <p><?= $fetch_profile['name']; ?></p>
             <div class="flex-btn">
                 <a href="profile.php" class="btn">profile</a>

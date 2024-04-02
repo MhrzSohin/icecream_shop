@@ -259,11 +259,11 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.header .right{
+header .right{
     display: flex;
 }
 #user-btn,
-.toogle-btn{
+.toggle-btn{
     font-size: 2rem;
     padding: .5rem;
     color: var(--pink-color);
@@ -271,7 +271,7 @@ header{
     transition: .6s;
     
 }
-.toogle-btn{
+.toggle-btn{
     margin-right: .5rem;
     display: none;
 }
@@ -419,5 +419,28 @@ header{
     border: 2px solid var(--main-color);
 }
 
+/* ------------media screen-------------------- */
+@media screen and (max-width:991px){
+    .toggle-btn{
+        display: block;
+    }
+    .sidebar{
+        padding-top: 4rem;
+        position: fixed;
+        width: 0;
+        transition: .5s;
+        z-index: 101;
+        top: 7%;
+    }
+    .sidebar .active{
+        width: 300px;
+    }
+    .sidebar .profile{
+        margin-top: .5rem;
+    }
+    section{
+        width: 100%;
+    }
+}
 
 
