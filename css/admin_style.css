@@ -418,24 +418,25 @@ header .right{
     background-color: var(--pink-opacity);
     border: 2px solid var(--main-color);
 }
-
+/* -----------------------dashboard------------------- */
 /* ------------media screen-------------------- */
 @media screen and (max-width:991px){
     .toggle-btn{
         display: block;
     }
     .sidebar{
+        background-color: var(--pink-opacity);
         padding-top: 4rem;
         position: fixed;
-        width: 0;
+        width: 0px;
         transition: .5s;
         z-index: 101;
         top: 7%;
     }
-    .sidebar .active{
+    .sidebar.active{
         width: 300px;
     }
-    .sidebar .profile{
+    .sidebar.profile{
         margin-top: .5rem;
     }
     section{
