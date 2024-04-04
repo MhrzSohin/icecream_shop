@@ -50,9 +50,9 @@
             <ul>
                 <li><a href="dashboard.php"> <i class="bx bxs-home-smile"></i>dashboard</a></li>
                 <li><a href="add_product.php"> <i class="bx bxs-shopping-bags"></i>add products</a></li>
+                <li><a href="view_product.php"> <i class="bx bxs-book-content"></i>view products</a></li>
                 <li><a href="user_accounts.php"> <i class="bx bxs-user-detail"></i>accounts</a></li>
                 <li><a href="../componets/admin_logout.php" onclick="return confirm('logout from this website');"><i class="bx bx-log-out"></i>logout</a></li>
-                <li><a href="dashboard.php"> <i class="bx bxs-home-smile"></i>dashboard</a></li>
             </ul>
         </div>
         <h3>Find Us</h3>
