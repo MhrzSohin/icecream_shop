@@ -1,6 +1,6 @@
 <?php
 
-
+    include '../componets/connect.php';
     if(isset($_COOKIE['seller_id'])){
         $seller_id = $_COOKIE['seller_id'];
     }else{

@@ -1,11 +1,56 @@
 <?php
 
-
+    include '../componets/connect.php';
     if(isset($_COOKIE['seller_id'])){
         $seller_id = $_COOKIE['seller_id'];
-    }else{
+    }else{ 
         $seller_id = '';
         header('location:login.php');
+    }
+    //add products in database
+    if (isset($_POST['publish'])) {
+
+        $id = unique_id();
+        $name = $_POST['name'];
+        $name = filter_var($name, FILTER_SANITIZE_STRING);
+
+        $price = $_POST['price'];
+        $price = filter_var($price, FILTER_SANITIZE_NUMBER_FLOAT);
+        
+        $description = $_POST['description'];
+        $description = filter_var($description, FILTER_SANITIZE_STRING);
+
+        $stock = $_POST['stock'];
+        $stock = filter_var($stock, FILTER_SANITIZE_NUMBER_FLOAT);
+        $status = 'active';
+
+        $image = $_FILES['image']['name'];
+        $image = filter_var($image, FILTER_SANITIZE_STRING);
+        $image_size = $_FILES['image']['size'];
+        $image_tmp_name = $_FILES['image']['tmp_name'];
+        $image_folder = '../uploaded_files/'.$image;
+
+        $select_image = $conn->prepare("SELECT * FROM `products` WHERE image = ? AND seller_id = ?");
+        $select_image->execute([$image,$seller_id]);
+
+        if(isset($image)) {
+            if($select_image->rowCount() > 0 ){
+                $warning_msg[] = 'image name repeated';
+            }elseif($image_size > 20000000){
+                $warning_msg[] = 'image size too large';
+            }else{
+                move_uploaded_file($image_tmp_name,$image_folder);
+            }
+        }else{
+            $image = '';
+        }
+        if($select_image->rowCount() > 0 AND $image != ''){
+            $warning_msg[] = 'please rename your image';
+        }else{
+            $insert_product = $conn->prepare("INSERT INTO `products`(id, seller_id, name, price, image, stock, product_details, status) VALUES(?,?,?,?,?,?,?,?)");
+            $insert_product->execute([$id, $seller_id, $name, $price, $image, $stock, $description, $status]);
+            $success_msg[] = 'product inserted successfully';
+        }
     }
 ?>
 <!DOCTYPE html>
