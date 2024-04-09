@@ -21,7 +21,7 @@
 <body> 
     <div class="main-container">
         <?php include '../componets/admin_header.php'; ?>
-        <section class="dashboard">
+        <section class="show-post">
             <div class="heading">
                 <h1>dashboard</h1>
                 <img src="../image/separator-img.png" alt="">
@@ -36,17 +36,17 @@
                     <form action="" method="post" class="box">
                         <input type="hidden" name="product_id" value="<?= $fetch_products['id']; ?>">
                         <?php if($fetch_products ['image'] != ''){ ?>
-                            <img src="../uploaded_files/<?= $fetch_products['image']; ?>" >
+                            <img src="../uploaded_files/<?= $fetch_products['image']; ?>" class="image">
                         <?php } ?> 
                         <div class="status" style="color: <?php if ($fetch_products['status'] == 'active'){ echo "limegreen";}else{echo "coral";} ?>"><?=$fetch_products['status'];?></div>
-                        <div class="price"><?=$fetch_products['price']; ?></div>
+                        <div class="price">$<?=$fetch_products['price']; ?>/-</div>
                         <div class="content">
-                            <img src="../image/shape-19.png" class="shape">
+                            <img src="../image/shape-19.png" class="shap">
                             <div class="title"><?=$fetch_products['name'];?></div>
                             <div class="flex-btn">
                                 <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" class="btn">edit</a>
                                 <button type="submit" name="delete" class="btn" onclick="return confirm('delete this product');">delete</button>
-                                <a href="read_product.php?post_id=<?= $fetch_products['id']; ?>" class="btn">read product</a>
+                                <a href="read_product.php?post_id=<?= $fetch_products['id']; ?>" class="btn">read</a>
                             </div>
                         </div>   
                     </form>            
@@ -55,18 +55,14 @@
                         }else{
                             echo '
                             <div class="empty">
-                            <p>no products added yet!! <br> <a href="add_product.php" class="btn" style="margin-top:1.5rem">add products</a></p>
+                            <p>no products added yet!! <br> <a href="add_product.php" 
+                            class="btn" style="margin-top:1.5rem">add products</a></p>
                             </div>
-                      
-
                             ';
                         }
                     ?>    
                 </div>
         </section>
-    </div>
-    <div class="empty">
-        <p>no products added yet!! <br> <a href="add_product.php" class="btn" style="margin-top:1.5rem">add products</a></p>
     </div>
   
 
